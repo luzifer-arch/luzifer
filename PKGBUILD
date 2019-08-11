@@ -6,7 +6,7 @@ pkgname=(
 	luzifer-devel
 	luzifer-gui
 )
-pkgver=0.1.0
+pkgver=0.1.1
 pkgrel=1
 pkgdesc='System configuration for @luzifer systems'
 arch=(any)
@@ -37,7 +37,6 @@ package_luzifer-base() {
 	depends+=(
 		curl
 		ddrescue
-		dialog
 		dust
 		envrun
 		exa
@@ -134,6 +133,7 @@ package_luzifer-gui() {
 
 	# Add GUI environment
 	depends+=(
+		dialog
 		dmenu
 		feh
 		maim
