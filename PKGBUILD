@@ -6,7 +6,7 @@ pkgname=(
 	luzifer-devel
 	luzifer-gui
 )
-pkgver=0.1.2
+pkgver=0.1.3
 pkgrel=1
 pkgdesc='System configuration for @luzifer systems'
 arch=(any)
@@ -28,7 +28,7 @@ package_luzifer-base() {
 		e2fsprogs file filesystem findutils gawk gcc-libs gettext glibc grep
 		gzip inetutils iproute2 iputils jfsutils less licenses linux
 		linux-firmware logrotate lvm2 man-db man-pages mdadm nano netctl pacman
-		pciutils pcmciautils perl procps-ng psmisc reiserfsprogs s-nail sed
+		pciutils perl procps-ng psmisc reiserfsprogs s-nail sed
 		shadow sysfsutils systemd-sysvcompat tar texinfo usbutils util-linux
 		which xfsprogs
 	)
