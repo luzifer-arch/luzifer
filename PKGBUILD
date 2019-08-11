@@ -6,7 +6,7 @@ pkgname=(
 	luzifer-devel
 	luzifer-gui
 )
-pkgver=0.1.3
+pkgver=0.2.0
 pkgrel=1
 pkgdesc='System configuration for @luzifer systems'
 arch=(any)
@@ -106,6 +106,8 @@ package_luzifer-devel() {
 }
 
 package_luzifer-gui() {
+	install=luzifer-gui.install
+
 	depends=(luzifer-base)
 
 	# Add fonts
