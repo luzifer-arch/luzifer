@@ -1,0 +1,28 @@
+post_install() {
+	post_upgrade
+}
+
+post_upgrade() {
+	# Enable timesync
+	systemctl enable --now systemd-timesyncd
+
+	# Set NTP servers
+	ntp_servers=(
+		ptbtime1.ptb.de
+		ptbtime2.ptb.de
+		ptbtime3.ptb.de
+		ntp1.lrz.de
+		ntp3.lrz.de
+		ntps1-0.cs.tu-berlin.de
+		ntps1-1.cs.tu-berlin.de
+	)
+	sed -E "s/^#?NTP=.*$/NTP=${ntp_servers[@]}/" /etc/systemd/timesyncd.conf
+
+	# Set local time
+	ln -sf /usr/share/zoneinfo/Europe/Berlin "/etc/localtime"
+
+	# Enable en_US locale
+	echo "LANG=en_US.UTF-8" >/etc/locale.conf
+	sed 's/#en_US/en_US/' -i /etc/locale.gen
+	locale-gen
+}
