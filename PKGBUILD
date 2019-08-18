@@ -6,7 +6,7 @@ pkgname=(
 	luzifer-devel
 	luzifer-gui
 )
-pkgver=0.2.0
+pkgver=0.3.0
 pkgrel=1
 pkgdesc='System configuration for @luzifer systems'
 arch=(any)
@@ -135,6 +135,7 @@ package_luzifer-gui() {
 
 	# Add GUI environment
 	depends+=(
+		dex
 		dialog
 		dmenu
 		feh
