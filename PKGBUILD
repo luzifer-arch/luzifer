@@ -6,7 +6,7 @@ pkgname=(
 	luzifer-devel
 	luzifer-gui
 )
-pkgver=0.3.0
+pkgver=0.4.0
 pkgrel=1
 pkgdesc='System configuration for @luzifer systems'
 arch=(any)
@@ -43,7 +43,6 @@ package_luzifer-base() {
 		expect
 		gocryptfs
 		jq
-		keybase
 		pacman-contrib
 		ripgrep
 		rsync
