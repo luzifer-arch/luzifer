@@ -6,7 +6,7 @@ pkgname=(
 	luzifer-devel
 	luzifer-gui
 )
-pkgver=0.4.0
+pkgver=0.4.1
 pkgrel=1
 pkgdesc='System configuration for @luzifer systems'
 arch=(any)
@@ -72,7 +72,7 @@ package_luzifer-base() {
 	depends+=(zsh)
 
 	# Add editor
-	depends+=(neovim python-neovim)
+	depends+=(neovim python-pynvim)
 
 	# Add script dependencies
 	depends+=(
