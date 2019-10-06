@@ -6,7 +6,7 @@ pkgname=(
 	luzifer-devel
 	luzifer-gui
 )
-pkgver=0.4.1
+pkgver=0.5.0
 pkgrel=1
 pkgdesc='System configuration for @luzifer systems'
 arch=(any)
@@ -21,10 +21,11 @@ package_luzifer-base() {
 	conflicts=(vim vi)
 	install=luzifer-base.install
 
-	# Build on Archlinux base group (pacman -Qgq base | xargs | fold -sw 72)
+	# Build on former Archlinux base group (pacman -Qgq base | xargs | fold -sw 72)
 	# Packages removed: vi
+	# Packages added: base (new Base-Meta-Package, essentially containing a subset of these)
 	depends=(
-		bash bzip2 coreutils cryptsetup device-mapper dhcpcd diffutils
+		base bash bzip2 coreutils cryptsetup device-mapper dhcpcd diffutils
 		e2fsprogs file filesystem findutils gawk gcc-libs gettext glibc grep
 		gzip inetutils iproute2 iputils jfsutils less licenses linux
 		linux-firmware logrotate lvm2 man-db man-pages mdadm nano netctl pacman
