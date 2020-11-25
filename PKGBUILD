@@ -6,7 +6,7 @@ pkgname=(
 	luzifer-devel
 	luzifer-gui
 )
-pkgver=0.5.0
+pkgver=0.5.1
 pkgrel=1
 pkgdesc='System configuration for @luzifer systems'
 arch=(any)
@@ -149,7 +149,7 @@ package_luzifer-gui() {
 	depends+=(
 		xf86-video-vesa xorg-bdftopcf xorg-docs xorg-font-util
 		xorg-fonts-100dpi xorg-fonts-75dpi xorg-fonts-encodings xorg-iceauth
-		xorg-luit xorg-mkfontscale xorg-server xorg-server-common
+		luit xorg-mkfontscale xorg-server xorg-server-common
 		xorg-server-devel xorg-server-xdmx xorg-server-xephyr xorg-server-xnest
 		xorg-server-xvfb xorg-server-xwayland xorg-sessreg xorg-setxkbmap
 		xorg-smproxy xorg-x11perf xorg-xauth xorg-xcmsdb xorg-xcursorgen
