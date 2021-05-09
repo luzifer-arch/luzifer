@@ -6,7 +6,7 @@ pkgname=(
 	luzifer-devel
 	luzifer-gui
 )
-pkgver=0.5.1
+pkgver=0.5.2
 pkgrel=1
 pkgdesc='System configuration for @luzifer systems'
 arch=(any)
@@ -135,6 +135,7 @@ package_luzifer-gui() {
 
 	# Add GUI environment
 	depends+=(
+		alacritty
 		dex
 		dialog
 		dmenu
@@ -142,7 +143,6 @@ package_luzifer-gui() {
 		maim
 		mupdf
 		redshift
-		termite
 	)
 
 	# Add Archlinux xorg group (pacman -Qgq xorg | xargs | fold -sw 72)
