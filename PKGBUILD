@@ -6,7 +6,7 @@ pkgname=(
   luzifer-devel
   luzifer-gui
 )
-pkgver=0.6.0
+pkgver=0.6.1
 pkgrel=1
 pkgdesc='System configuration for @luzifer systems'
 arch=(any)
@@ -161,5 +161,11 @@ package_luzifer-gui() {
     redshift
     xbindkeys
     xclip
+  )
+
+  # Add sound
+  depends+=(
+    pulseaudio
+    pulsemixer
   )
 }
