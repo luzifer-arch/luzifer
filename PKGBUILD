@@ -7,7 +7,7 @@ pkgname=(
   luzifer-gui
   luzifer-lenovo-gui
 )
-pkgver=0.6.2
+pkgver=0.6.3
 pkgrel=1
 pkgdesc='System configuration for @luzifer systems'
 arch=(any)
@@ -179,7 +179,7 @@ package_luzifer-gui() {
 
   # Add sound
   depends+=(
-    pamixer
+    alsa-utils
     pulseaudio
     pulsemixer
   )
