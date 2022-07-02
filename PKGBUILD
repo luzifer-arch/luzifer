@@ -7,7 +7,7 @@ pkgname=(
   luzifer-gui
   luzifer-lenovo-gui
 )
-pkgver=0.6.3
+pkgver=0.6.4
 pkgrel=1
 pkgdesc='System configuration for @luzifer systems'
 arch=(any)
@@ -117,6 +117,7 @@ package_luzifer-devel() {
     docker
     git
     go
+    shfmt
   )
 }
 
