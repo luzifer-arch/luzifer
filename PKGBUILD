@@ -5,8 +5,9 @@ pkgname=(
   luzifer-base
   luzifer-devel
   luzifer-gui
+  luzifer-lenovo-gui
 )
-pkgver=0.6.1
+pkgver=0.6.2
 pkgrel=1
 pkgdesc='System configuration for @luzifer systems'
 arch=(any)
@@ -140,7 +141,20 @@ package_luzifer-gui() {
   depends+=(
     lightdm
     lightdm-gtk-greeter
-    xorg-server
+  )
+
+  # Add packages of the xorg group (pacman -Sg xorg | cut -d ' ' -f 2 | xargs | fold -sw 72)
+  depends+=(
+    xf86-video-vesa xorg-bdftopcf xorg-docs xorg-font-util
+    xorg-fonts-100dpi xorg-fonts-75dpi xorg-fonts-encodings xorg-iceauth
+    xorg-mkfontscale xorg-server xorg-server-common xorg-server-devel
+    xorg-server-xephyr xorg-server-xnest xorg-server-xvfb xorg-sessreg
+    xorg-setxkbmap xorg-smproxy xorg-x11perf xorg-xauth xorg-xbacklight
+    xorg-xcmsdb xorg-xcursorgen xorg-xdpyinfo xorg-xdriinfo xorg-xev
+    xorg-xgamma xorg-xhost xorg-xinput xorg-xkbcomp xorg-xkbevd
+    xorg-xkbutils xorg-xkill xorg-xlsatoms xorg-xlsclients xorg-xmodmap
+    xorg-xpr xorg-xprop xorg-xrandr xorg-xrdb xorg-xrefresh xorg-xset
+    xorg-xsetroot xorg-xvinfo xorg-xwayland xorg-xwd xorg-xwininfo xorg-xwud
   )
 
   # Add i3 (pacman -Sg i3 | cut -d ' ' -f 2 | xargs | fold -sw 72)
@@ -165,7 +179,18 @@ package_luzifer-gui() {
 
   # Add sound
   depends+=(
+    pamixer
     pulseaudio
     pulsemixer
+  )
+}
+
+package_luzifer-lenovo-gui() {
+  # This extends the normal GUI package for Thinkpads
+  depends=(luzifer-gui)
+
+  depends+=(
+    acpi            # Required for lid-close events
+    xorg-xbacklight # Control display brightness
   )
 }
