@@ -7,7 +7,7 @@ pkgname=(
   luzifer-gui
   luzifer-lenovo-gui
 )
-pkgver=0.6.6
+pkgver=0.7.0
 pkgrel=1
 pkgdesc='System configuration for @luzifer systems'
 arch=(any)
@@ -55,6 +55,7 @@ package_luzifer-base() {
     exa
     expect
     gocryptfs
+    inetutils
     jq
     pacman-contrib
     peco
