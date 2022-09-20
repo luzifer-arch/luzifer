@@ -7,7 +7,7 @@ pkgname=(
   luzifer-gui
   luzifer-lenovo-gui
 )
-pkgver=0.7.0
+pkgver=0.8.0
 pkgrel=1
 pkgdesc='System configuration for @luzifer systems'
 arch=(any)
@@ -90,7 +90,10 @@ package_luzifer-base() {
   )
 
   # Add shell
-  depends+=(zsh)
+  depends+=(
+    oh-my-posh
+    zsh
+  )
 
   # Add editor
   depends+=(neovim python-pynvim)
