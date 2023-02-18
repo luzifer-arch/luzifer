@@ -7,7 +7,7 @@ pkgname=(
   luzifer-gui
   luzifer-lenovo-gui
 )
-pkgver=0.8.0
+pkgver=0.9.0
 pkgrel=1
 pkgdesc='System configuration for @luzifer systems'
 arch=(any)
@@ -108,15 +108,11 @@ package_luzifer-base() {
 }
 
 package_luzifer-devel() {
-  # Start with Archlinux base-devel group (pacman -Sg base-devel | cut -d ' ' -f 2 | xargs | fold -sw 72)
+  # Start with Archlinux base-devel meta-package and my base-package
   depends=(
-    autoconf automake binutils bison fakeroot file findutils flex gawk gcc
-    gettext grep groff gzip libtool m4 make pacman patch pkgconf sed sudo
-    texinfo which
+    luzifer-base
+    base-devel
   )
-
-  # Apply my base package
-  depends+=(luzifer-base)
 
   # Add dev specific tools
   depends+=(
