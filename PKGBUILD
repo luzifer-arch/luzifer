@@ -7,7 +7,7 @@ pkgname=(
   luzifer-gui
   luzifer-lenovo-gui
 )
-pkgver=0.9.0
+pkgver=0.9.1
 pkgrel=1
 pkgdesc='System configuration for @luzifer systems'
 arch=(any)
@@ -165,7 +165,7 @@ package_luzifer-gui() {
 
   # Add i3 (pacman -Sg i3 | cut -d ' ' -f 2 | xargs | fold -sw 72)
   depends+=(
-    i3-gaps i3-wm i3blocks i3lock i3status
+    i3-wm i3blocks i3lock i3status
   )
 
   # Add GUI environment
