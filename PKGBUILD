@@ -7,7 +7,7 @@ pkgname=(
   luzifer-gui
   luzifer-lenovo-gui
 )
-pkgver=0.9.1
+pkgver=0.9.2
 pkgrel=1
 pkgdesc='System configuration for @luzifer systems'
 arch=(any)
@@ -52,8 +52,8 @@ package_luzifer-base() {
     ddrescue
     dust
     envrun
-    exa
     expect
+    eza
     gocryptfs
     inetutils
     jq
