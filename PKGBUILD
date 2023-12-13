@@ -7,7 +7,7 @@ pkgname=(
   luzifer-gui
   luzifer-lenovo-gui
 )
-pkgver=0.9.2
+pkgver=0.9.3
 pkgrel=1
 pkgdesc='System configuration for @luzifer systems'
 arch=(any)
@@ -54,6 +54,7 @@ package_luzifer-base() {
     envrun
     expect
     eza
+    git
     gocryptfs
     inetutils
     jq
@@ -120,7 +121,6 @@ package_luzifer-devel() {
     aws-cli
     diffutils
     docker
-    git
     go
     shfmt
   )
