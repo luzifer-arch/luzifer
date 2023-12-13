@@ -7,7 +7,7 @@ pkgname=(
   luzifer-gui
   luzifer-lenovo-gui
 )
-pkgver=0.9.4
+pkgver=0.9.5
 pkgrel=1
 pkgdesc='System configuration for @luzifer systems'
 arch=(any)
@@ -48,6 +48,7 @@ package_luzifer-base() {
 
   # Add system utils
   depends+=(
+    bc
     curl
     ddrescue
     dust
@@ -177,8 +178,10 @@ package_luzifer-gui() {
     dialog
     dmenu
     feh
+    keepassxc
     maim
     mupdf
+    nextcloud-client
     redshift
     xbindkeys
     xclip
