@@ -7,7 +7,7 @@ pkgname=(
   luzifer-gui
   luzifer-lenovo-gui
 )
-pkgver=0.9.3
+pkgver=0.9.4
 pkgrel=1
 pkgdesc='System configuration for @luzifer systems'
 arch=(any)
@@ -66,6 +66,7 @@ package_luzifer-base() {
     tmux
     unzip
     vault-bin
+    vault-user-token
     wget
   )
 
