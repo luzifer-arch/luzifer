@@ -7,7 +7,7 @@ pkgname=(
   luzifer-gui
   luzifer-lenovo-gui
 )
-pkgver=0.9.5
+pkgver=0.9.6
 pkgrel=1
 pkgdesc='System configuration for @luzifer systems'
 arch=(any)
@@ -39,7 +39,6 @@ package_luzifer-base() {
     man-db
     man-pages
     mdadm
-    netctl
     usbutils
     util-linux
     which
@@ -125,6 +124,7 @@ package_luzifer-devel() {
     docker
     go
     shfmt
+    vim-go-tools
   )
 }
 
