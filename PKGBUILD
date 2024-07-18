@@ -7,7 +7,7 @@ pkgname=(
   luzifer-gui
   luzifer-lenovo-gui
 )
-pkgver=0.9.6
+pkgver=0.9.7
 pkgrel=1
 pkgdesc='System configuration for @luzifer systems'
 arch=(any)
@@ -178,6 +178,7 @@ package_luzifer-gui() {
     dialog
     dmenu
     feh
+    gnome-keyring
     keepassxc
     maim
     mupdf
